@@ -6,28 +6,30 @@
 }
 
 body{
-    height: 100vh;
     background-color: grey;
     display: flex;
     justify-content: center;
 }
 
+h1{
+    color: beige;
+}
+
 .container{
     border: solid #a0a0a0 1px;
-    position: absolute;
-    align-self: center;
-    width: 90vw;
-    max-width: 40em;
+    max-width: 100vw;
+    margin: 0 0.2em;
     font-size: 1rem;
-    padding: 3em 1.2em;
+    padding: 1em;
     border-radius: 0.6em;
-    background-color: #feecec;
+    background-color: rgb(40, 4, 4) 
 }
 
 .search-container{
-    display: grid;
-    grid-template-columns: 9fr 3fr;
+    display: flex;
+    justify-content: space-between;
     gap: 1.2em;
+    margin-top: 0.5em;
 }
 
 .search-container input, .search-container button{
@@ -38,12 +40,13 @@ body{
 
 .search-container input{
     background-color: transparent;
-    border: 1px solid #a0a0a0;
+    border: 1px solid white;
     padding: 0.7em;
+    color: white;
 }
 
 .search-container input:focus {
-    border-color: black;
+    border-color: aqua;
 }
 
 .search-container button{
@@ -56,22 +59,39 @@ body{
     opacity: 0.7;
 }
 
+#result{
+    margin-top: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.movie-card{
+    width: 18em;
+    border-radius: 0.4em;
+    margin: 0.5em;
+    background-color: #925b5b;
+}
+
+
 .info{
-    position: relative;
-    display: grid;
-    grid-template-columns: 4fr 8fr;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-top: 1.2em;
+    width: 30em; 
 }
 
 .poster{
     width: 100%;
+    border-radius: 0.3em;
 }
 
 h2{
     text-align: center;
     font-size: 1.5em;
     font-weight: 600;
+    color: beige;
 }
 
 .rating{
@@ -118,19 +138,27 @@ h2{
 h3{
     font-weight: 500;
     margin-top: 1.2em;
+    color: beige;
 }
 
 p{
-    font-size: 0.9em;
+    font-size: 0.7em;
     font-weight: 300;
     line-height: 2em;
     text-align: justify;
-    color: #a0a0a0;
+    color: white;
+    padding-left: 3em;
+    padding-right: 3em;
 }
 
 .msg{
     text-align: center;
 }
+
+
+
+
+
 
 @media screen and (max-width: 600px) {
     .container{
